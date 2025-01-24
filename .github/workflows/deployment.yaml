@@ -58,7 +58,7 @@ jobs:
       # Deploy with Helm
       - name: Deploy with Helm
         run: |
-          helm upgrade --install todo-app-backend ./todo-app-backend \
+          helm upgrade --install todo-app-backend ./helm/todo-app-backend \
             --set image.repository=27099817/todo-app-backend \
             --set image.tag=${{ env.IMAGE_TAG }} \
             --namespace default \
