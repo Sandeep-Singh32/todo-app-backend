@@ -1,3 +1,9 @@
+replicaCount: 2
+
 image:
-  repository: 27099817/todo-app-backend
+  repository: 27099817/todo-app-web
   tag: latest
+
+service:
+  type: LoadBalancer
+  port: 80
