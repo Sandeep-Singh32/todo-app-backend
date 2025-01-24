@@ -20,7 +20,9 @@ import { TypeOrmModule } from '@nestjs/typeorm';
         entities: [__dirname + '/../**/*.entity{.ts,.js}'],
         synchronize: true,
         logging: true,
-        ssl: true
+        ssl: {
+          rejectUnauthorized: false, // Disable strict validation
+        },
       }),
       inject: [ConfigService],
     }),
