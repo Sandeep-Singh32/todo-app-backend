@@ -7,7 +7,7 @@ async function bootstrap() {
   // Enable CORS for all routes
   app.enableCors({ origin: '*' });
   await app.listen(PORT, () => {
-    console.log('App is running on PORT: ' + PORT);
+    console.log('App is running on the PORT: ' + PORT);
   });
 }
 bootstrap();
