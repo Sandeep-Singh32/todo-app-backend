@@ -1,8 +1,8 @@
 {
   "name": "todo-app-backend",
   "version": "0.0.1",
-  "description": "",
-  "author": "",
+  "description": "This is a basic todo app using postgresql for DB",
+  "author": "Sandeep",
   "private": true,
   "license": "UNLICENSED",
   "scripts": {
@@ -21,10 +21,16 @@
   },
   "dependencies": {
     "@nestjs/common": "^10.0.0",
+    "@nestjs/config": "^4.0.0",
     "@nestjs/core": "^10.0.0",
     "@nestjs/platform-express": "^10.0.0",
+    "@nestjs/typeorm": "^11.0.0",
+    "pg": "^8.13.1",
+    "postgres": "^3.4.5",
     "reflect-metadata": "^0.2.0",
-    "rxjs": "^7.8.1"
+    "rxjs": "^7.8.1",
+    "typeorm": "^0.3.20",
+    "winston": "^3.17.0"
   },
   "devDependencies": {
     "@nestjs/cli": "^10.0.0",
