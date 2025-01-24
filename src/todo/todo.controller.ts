@@ -81,12 +81,12 @@ export class TodoController {
   }
 
   @Delete(':id')
-  async deleteTodo(@Param('id') id: string): Promise<string> {
+  async deleteTodo(@Param('id') id: string): Promise<any> {
     this.loggerService.info(`Deleting todo with id: ${id}`);
     try {
       await this.todoService.deleteTodo(id);
       this.loggerService.info(`Successfully deleted todo with id: ${id}`);
-      return 'Successfully deleted todo';
+      return { message: 'Successfully deleted todo' };
     } catch (error) {
       this.loggerService.error(`Failed to delete todo with id: ${id}`, error);
       throw new HttpException(
